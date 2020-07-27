@@ -1,0 +1,21 @@
+<div class="form-group mt-4">
+    <label for="title">Title:</label>
+    <input type="text" class="form-control" name="title" id="title" placeholder="Add a nice title for your article"
+        value="<%= ( typeof title != 'undefined')? title : '' %>" required>
+    <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Please fill out this field.</div>
+</div>
+<div class="form-group mt-4">
+    <label for="title2">Sub Title:</label>
+    <input type="text" class="form-control" name="title2" id="title2" placeholder="Add a sub title for your article"
+    value="<%= ( typeof title2 != 'undefined')? title2 : '' %>" required>
+    <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Please fill out this field.</div>
+</div>
+<div class="form-group mt-4">
+    <label for="description">Title:</label>
+    <textarea type="text" rows='10'class="form-control" name="description" id="description" placeholder="Add content for your article"
+     required><%= ( typeof description != 'undefined')? description : '' %></textarea>
+    <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Please fill out this field.</div>
+</div>

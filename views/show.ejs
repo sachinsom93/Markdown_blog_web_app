@@ -1,0 +1,14 @@
+<h1 class="mt-4"><%= showArticle.title %></h1>
+<small class="text-muted ">Version: <%= showArticle.__v + 1 %></small>
+<small class="text-muted ml-4"><%= showArticle.createdAt %></small>
+<h2 class="mt-4"><%= showArticle.title2 %></h2>
+<a href="/article" class="btn btn-success">All articles</a>
+<a href="/article/edit/<%= showArticle._id %>" class="btn btn-secondary">Edit</a>
+<form action="/article/delete/<%= showArticle._id %>?_method=DELETE" method="POST" class="d-inline">
+    <button type="submit" class="btn btn-danger">Delete</button>
+</form>
+
+<hr>
+<div>
+    <%- showArticle.sanitizedHTML %>
+</div>

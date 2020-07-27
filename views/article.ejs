@@ -1,0 +1,22 @@
+<h1 class="mt-4 mb-4">Articles</h1>
+<a href="article/new" class="btn btn-success mb-4"><i class="fa fa-plus mr-2"></i>Add Article</a>
+<% if( articles.length > 0) {  %>
+  <% articles.forEach((item) => {%>
+    <div class="card mt-4">
+      <div class="card-body">
+        <h4 class="card-title"><%= item.title %></h4>
+        <p class="text-muted mb-0">Version: <%= item.__v + 1 %></p>
+        <small class="text-muted">Date & time: <%= item.createdAt %></small>
+        <p class="card-text"><%= item.title2 %></p>
+        <a href='article/show/<%= item._id %>' class="card-link btn btn-primary ">Read More</a>
+        <a href="article/edit/<%= item._id %>" class="card-link btn btn-secondary">edit</a>
+        <!-- <a href="article/delete" class="card-link btn btn-danger">Delete</a> -->
+        <form action="/article/delete/<%= item._id %>?_method=DELETE" method="POST" class="d-inline">
+          <button type="submit" class="btn btn-danger">Delete</button>
+        </form>
+      </div>
+    </div>
+  <% }) %>
+<% } %>
+
+  
