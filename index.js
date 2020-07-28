@@ -33,6 +33,11 @@ require('./model/db')
 // setting routers 
 app.use('/article', articleRouter)
 
+// welcome route
+app.get('/', (req, res) => {
+    res.render("welcome")
+})
+
 // server starting 
 app.listen(PORT, (err) => {
     if(!err){
